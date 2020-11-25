@@ -157,6 +157,10 @@ const PianoSdk = {
         config.showLoginHandler,
         config.showTemplateHandler
       );
+      const subscribe = PianoComposer.addEventListener("ShowLoginListener", () => { 
+        callback("ShowLoginListener")
+      })
+      return subscribe;
     }
   },
 };
